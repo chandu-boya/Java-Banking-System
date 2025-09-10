@@ -13,6 +13,7 @@
 
 **--> Code Reusability:** Extended functionality through inheritance instead of rewriting code
 
+
 **2. Java Core Concepts**
 
 a. Class and object creation
@@ -25,6 +26,7 @@ d. Switch-case for menu-driven programs
 
 e. Random number generation for account numbers
 
+
 **3. Practical Programming Skills**
    
 **I. Real-World Application Structure:** Built a complete banking system mimicking real financial operations
@@ -35,43 +37,49 @@ e. Random number generation for account numbers
 
 **IV. Problem-Solving:** Addressed logical flow issues in menu navigation and data persistence
 
+
 **4. Project Features**
 
---> Automatic 8-digit account number generation
+**-->** Automatic 8-digit account number generation
 
---> Account creation with user details
+**-->** Account creation with user details
 
---> Balance checking and display
+**-->** Balance checking and display
 
---> Deposit and withdrawal operations
+**-->** Deposit and withdrawal operations
 
---> Account details viewing
+**-->** Account details viewing
 
---> Menu-driven interface
+**-->** Menu-driven interface
+
 
 **5. Customer Data Fields Handled**
 
-**Full Name
+**Full Name**
 
-Date of Birth (DD/MM/YYYY)
+**Date of Birth (DD/MM/YYYY)**
 
-Gender
+**Gender**
 
-Aadhaar Number
+**Aadhaar Number**
 
-Mobile Number
+**Mobile Number**
 
-Complete Address
+**Complete Address**
 
-PIN Code
+**PIN Code**
 
-Account Number (Auto-generated)
+**Account Number (Auto-generated)**
 
-Account Balance (Default: ₹0.0)**
+**Account Balance (Default: ₹0.0)**
+
 
 **6. Project Structure**
 
-BankingSystem/
-├── User.java          # Base class with customer data and getters/setters
-├── Operation.java     # Banking operations (extends User)
-└── BankAPP.java       # Main class with user interface and menu system
+**BankingSystem/**
+
+**├── User.java          # Base class with customer data and getters/setters**
+
+**├── Operation.java     # Banking operations (extends User)**
+
+**└── BankAPP.java       # Main class with user interface and menu system**
