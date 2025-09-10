@@ -1,0 +1,84 @@
+--> How to run
+# Compile all Java files
+javac BankAPP.java
+
+# Run the application
+java BankAPP
+
+
+CONSOLE OUTPUT: 
+
+=====> Welcome to NCH Bank <=====
+=====> Create Your Account <=====
+Enter Full Name: Boya Chandu
+Enter Date of Birth (DD/MM/YYYY): 01/05/2003
+Enter Gender: Male
+Enter Aadhaar Number: 1111 2222 3333
+Enter Mobile Number: 7330854291
+Enter Address: Pottipadu, Guntakal
+Enter PIN Code: 515832
+
+Account created successfully!
+Your Account Number: 43912653
+Your Initial Balance: $0.0
+
+===> Banking Menu <===
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. Display Account Details
+5. Exit
+Choose Option (1-5): 1
+Account Balance = 0.0
+
+===> Banking Menu <===
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. Display Account Details
+5. Exit
+Choose Option (1-5): 2
+Enter amount to deposit: 50000
+Your Amount has been successfully deposited.
+Total Balance = 50000.0
+
+===> Banking Menu <===
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. Display Account Details
+5. Exit
+Choose Option (1-5): 3
+Enter Amount to withdraw: 10000
+Your amount has been successfully withdrawn.
+Total Balance = 40000.0
+
+===> Banking Menu <===
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. Display Account Details
+5. Exit
+Choose Option (1-5): 4
+
+===> Account Details <===
+Full Name: Boya Chandu
+Date of Birth: 01/05/2003
+Gender: Male
+Aadhaar Number: 1111 2222 3333
+Mobile Number: 7330854291
+Address: Pottipadu, Guntakal
+PIN Code: 515832
+Account Number: 43912653
+Account Balance: 40000.0
+-------------------------------
+
+===> Banking Menu <===
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. Display Account Details
+5. Exit
+Choose Option (1-5): 5
+Thank you for banking with us!
+
