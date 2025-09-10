@@ -1,13 +1,15 @@
 # Java-Banking-System
 **This is my first complete Java application that I built while learning Object-Oriented Programming concepts!**
 
-What I Learned Through This Project
+**What I Learned Through This Project**
 
 **1. Object-Oriented Programming Fundamentals**
    
-**--> Encapsulation:** Used private fields with public getters/setters to protect data
+**--> Encapsulation:** Used private fields with public getters/setters to protect sensitive customer data
 
-**--> Inheritance:** Created a class hierarchy (Data → Operation → User)
+**--> Inheritance:** Created a class hierarchy (Operation → User) with proper method overriding
+
+**--> Data Hiding:** Implemented private access modifiers to protect internal class implementation
 
 **--> Code Reusability:** Extended functionality through inheritance instead of rewriting code
 
@@ -25,13 +27,13 @@ e. Random number generation for account numbers
 
 **3. Practical Programming Skills**
    
-i. How to structure a real-world application
+**I. Real-World Application Structure:** Built a complete banking system mimicking real financial operations
 
-ii. Input validation and error handling
+**II. Input Validation:** Implemented balance checks and withdrawal validations
 
-iii. Creating user-friendly console interfaces
+**III. User-Friendly Interface:** Designed clear console prompts and formatted output displays
 
-iv. Problem-solving through code organization
+**IV. Problem-Solving:** Addressed logical flow issues in menu navigation and data persistence
 
 **4. Project Features**
 
@@ -46,3 +48,30 @@ iv. Problem-solving through code organization
 --> Account details viewing
 
 --> Menu-driven interface
+
+**5. Customer Data Fields Handled**
+
+**Full Name
+
+Date of Birth (DD/MM/YYYY)
+
+Gender
+
+Aadhaar Number
+
+Mobile Number
+
+Complete Address
+
+PIN Code
+
+Account Number (Auto-generated)
+
+Account Balance (Default: ₹0.0)**
+
+**6. Project Structure**
+
+BankingSystem/
+├── User.java          # Base class with customer data and getters/setters
+├── Operation.java     # Banking operations (extends User)
+└── BankAPP.java       # Main class with user interface and menu system
