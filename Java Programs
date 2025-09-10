@@ -1,0 +1,221 @@
+1. User.java
+
+import java.util.*;
+
+class User {
+	private String fullName;
+	private String dob;
+	private String gender;
+	private String aadhaar;
+	private String mobileNumber;
+	private String address;
+	private int pinCode;
+	private int accnum;
+	private double balance;
+
+	User(String fullName, String dob, String gender, String aadhaar, String mobileNumber, String address, int pinCode, int accnum) {
+
+		this.fullName = fullName;
+		this.dob = dob;
+		this.gender = gender;
+		this.aadhaar = aadhaar;
+		this.mobileNumber = mobileNumber;
+		this.address = address;
+		this.pinCode = pinCode;
+		this.accnum = accnum;
+		this.balance = 0.0;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public String getAadhaar() {
+		return aadhaar;
+	}
+
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public int getPinCode() {
+		return pinCode;
+	}
+
+	public int getAccnum() {
+		return accnum;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public void setAadhaar(String aadhaar) {
+		this.aadhaar = aadhaar;
+	}
+
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setPinCode(int pinCode) {
+		this.pinCode = pinCode;
+	}
+
+	public void setAccnum(int accnum) {
+		this.accnum = accnum;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+}
+
+
+2. Operation.java
+
+class Operation extends User {
+	Operation(String fullName, String dob, String gender, String aadhaar, String mobileNumber, String address, int pinCode, int accnum) {
+		super(fullName, dob, gender, aadhaar, mobileNumber, address, pinCode, accnum);
+	}
+
+	public void balance() {
+		System.out.println("Account Balance = " + getBalance());
+	}
+
+	public void deposit(Scanner sc) {
+		System.out.print("Enter amount to deposit: ");
+		double dep = sc.nextDouble();
+		setBalance(getBalance() + dep);
+		System.out.println("Your Amount has been successfully deposited.\nTotal Balance = " + getBalance());
+	}
+
+	public void withdraw(Scanner sc) {
+		System.out.print("Enter Amount to withdraw: ");
+		double wit = sc.nextDouble();
+		if (wit <= getBalance()) {
+			setBalance(getBalance() - wit);
+			System.out.println("Your amount has been successfully withdrawn.\nTotal Balance = " + getBalance());
+		} else {
+			System.out.println("You don't have sufficient amount.");
+		}
+	}
+
+	public void display() {
+		System.out.println("\n===> Account Details <===");
+		System.out.println("Full Name: " + getFullName());
+		System.out.println("Date of Birth: " + getDob());
+		System.out.println("Gender: " + getGender());
+		System.out.println("Aadhaar Number: " + getAadhaar());
+		System.out.println("Mobile Number: " + getMobileNumber());
+		System.out.println("Address: " + getAddress());
+		System.out.println("PIN Code: " + getPinCode());
+		System.out.println("Account Number: " + getAccnum());
+		System.out.println("Account Balance: " + getBalance());
+		System.out.println("-------------------------------");
+	}
+}
+
+// Here is the main class
+3. BankAPP.java
+
+public class BankAPP {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("=====> Welcome to NCH Bank <=====");
+        System.out.println("=====> Create Your Account <=====");
+        
+        System.out.print("Enter Full Name: ");
+        String fullName = sc.nextLine();
+        
+        System.out.print("Enter Date of Birth (DD/MM/YYYY): ");
+        String dob = sc.nextLine();
+        
+        System.out.print("Enter Gender: ");
+        String gender = sc.nextLine();
+        
+        System.out.print("Enter Aadhaar Number: ");
+        String aadhaar = sc.nextLine();
+        
+        System.out.print("Enter Mobile Number: ");
+        String mobileNumber = sc.nextLine();
+        
+        System.out.print("Enter Address: ");
+        String address = sc.nextLine();
+        
+        System.out.print("Enter PIN Code: ");
+        int pinCode = sc.nextInt();
+        
+        // Here am generating random account number automatically
+        int accnum = 10000000 + new Random().nextInt(90000000);
+        
+        Operation account = new Operation(fullName, dob, gender, aadhaar, mobileNumber, address, pinCode, accnum);
+        
+        System.out.println("\nAccount created successfully!");
+        System.out.println("Your Account Number: " + account.getAccnum());
+        System.out.println("Your Initial Balance: $" + account.getBalance());
+        
+        
+        while(true) {
+            System.out.println("\n===> Banking Menu <===");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Deposit Money");
+            System.out.println("3. Withdraw Money");
+            System.out.println("4. Display Account Details");
+            System.out.println("5. Exit");
+            System.out.print("Choose Option (1-5): ");
+            
+            int op = sc.nextInt();
+            
+            switch(op) {
+                case 1:
+                    account.balance();
+                    break;
+                case 2:
+                    account.deposit(sc);
+                    break;
+                case 3:
+                    account.withdraw(sc);
+                    break;
+                case 4:
+                    account.display();
+                    break;
+                case 5:
+                    System.out.println("Thank you for banking with us!");
+                    sc.close();
+                    return;
+                default:
+                    System.out.println("Invalid option! Please choose 1-5.");
+            }
+        }
+    }
+}
