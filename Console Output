@@ -6,7 +6,7 @@ javac BankAPP.java
 java BankAPP
 
 
-CONSOLE OUTPUT: 
+CONSOLE OUTPUT:
 
 =====> Welcome to NCH Bank <=====
 =====> Create Your Account <=====
